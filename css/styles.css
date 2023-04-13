@@ -71,7 +71,7 @@ img {
 
 .logo {
     display: block;
-    
+
 
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -82,7 +82,7 @@ img {
     color: var(--primary-brand);
 }
 
-.nav-item .logo{
+.nav-item .logo {
     margin-right: 76px;
 }
 
@@ -251,6 +251,18 @@ img {
     width: calc((100%-72px)/4);
 }
 
+/* --------BACKGROUND IMAGES---------- */
+.icon-strategy {
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    background-image: url("../images/icons.svg#icon-strategy");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--light-mode);
+}
+
+
 /* -----------------/FEATURES------------------------ */
 /* -----------------SECTION SKILS----------------------- */
 
@@ -301,13 +313,13 @@ img {
 }
 
 /* -----------------TEAM SOCIAL LIST---------- */
-.team-social-list{
+.team-social-list {
     display: flex;
     justify-content: center;
     gap: 24px;
 }
 
-.team-list-item{
+.team-list-item {
     display: flex;
     align-items: center;
     margin: 0;
@@ -321,15 +333,19 @@ img {
     background: var(--primary-brand);
 }
 
-.social-link{
+.social-link {
     fill: var(--accent-color);
 }
 
 /* ---------------------------CUSTOMERS---------------- */
 
-.customers-list{
+.customers-list {
     display: flex;
     gap: 24px;
+}
+
+.customers-link {
+    padding: 16px 32px;
 }
 
 
@@ -450,6 +466,6 @@ img {
 
 }
 
-.card-sign .section-text{
+.card-sign .section-text {
     color: var(--main-text-color);
 }
