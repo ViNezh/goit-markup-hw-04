@@ -7,6 +7,9 @@
     --pressed-state: #404bbf;
     --main-bg-color: #ffffff;
     --secondary-bg-color: #f4f4fd;
+    --subtle-text-color: #8e8f99;
+    --success-color: #31d0aa;
+    --hero-background: #2e2f42;
 }
 
 body {
@@ -71,7 +74,6 @@ img {
 
 .logo {
     display: block;
-
 
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -155,14 +157,19 @@ img {
     padding-top: 120px;
 }
 
-
 /* -----------------------HERO----------------------- */
-.section:nth-child(1) {
+
+.hero-image {
+    margin-left: auto;
+    margin-right: auto;
     padding: 188px 0px;
-
-    background-color: var(--title-text-color);
-
+    width: 1440px;
+    height: 600px;
     text-align: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .main-title {
@@ -193,10 +200,10 @@ img {
     background: var(--primary-brand);
 
     border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: 0px;
     padding: 16px 32px;
     min-width: 169px;
-
 }
 
 .order-btn:hover,
@@ -248,20 +255,21 @@ img {
 
 /* FEATURES ITEM WIDTH CALCULATED */
 .features-item .item {
-    width: calc((100%-72px)/4);
+    width: calc((100%-72px) / 4);
 }
 
-/* --------BACKGROUND IMAGES---------- */
-.icon-strategy {
+/* --------FEATURES IMAGES---------- */
+.icon-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 264px;
     height: 112px;
     margin-bottom: 8px;
-    background-image: url("../images/icons.svg#icon-strategy");
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: var(--light-mode);
+    border-radius: 4px;
 }
-
 
 /* -----------------/FEATURES------------------------ */
 /* -----------------SECTION SKILS----------------------- */
@@ -277,7 +285,7 @@ img {
 
 /* SKILS ITEM WIDTH CALCULATED */
 .skils-item .item {
-    width: calc((100%-48px)/3);
+    width: calc((100%-48px) / 3);
 }
 
 /* -----------------/SKILS----------------------- */
@@ -293,9 +301,8 @@ img {
 }
 
 .team-item .card-bgc {
-    width: calc((100%-72px)/4);
+    width: calc((100%-72px) / 4);
 }
-
 
 .card-bgc {
     background-color: var(--main-bg-color);
@@ -306,10 +313,13 @@ img {
 .card-pad {
     padding-top: 32px;
     padding-bottom: 32px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
+}
 
-
+.card-pad>.section-text {
+    margin-bottom: 8px;
 }
 
 /* -----------------TEAM SOCIAL LIST---------- */
@@ -319,14 +329,11 @@ img {
     gap: 24px;
 }
 
-.team-list-item {
-    display: flex;
-    align-items: center;
-    margin: 0;
-}
-
 .team-social-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -334,7 +341,12 @@ img {
 }
 
 .social-link {
-    fill: var(--accent-color);
+    fill: var(--light-mode);
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color: var(--pressed-state);
 }
 
 /* ---------------------------CUSTOMERS---------------- */
@@ -345,10 +357,25 @@ img {
 }
 
 .customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 16px 32px;
+    border: 1px solid var(--subtle-text-color);
+    border-radius: 4px;
+    color: var(--subtle-text-color);
 }
 
+.customers-link:hover,
+.customers-link:focus {
+    border-color: var(--pressed-state);
+    color: var(--pressed-state);
+}
 
+.icon-clients {
+    fill: currentColor;
+}
 
 /* -----------------------/MAIN----------------------- */
 /* -----------------------FOOTER----------------------- */
@@ -369,6 +396,11 @@ img {
     color: var(--accent-color);
 }
 
+.footer>.container {
+    display: flex;
+    gap: 120px;
+}
+
 .footer .container .logo {
     display: inline-block;
 
@@ -377,6 +409,43 @@ img {
 
 .footer .container .footer-text {
     width: 264px;
+}
+
+/* --------FOOTER SOCIAL LINK------- */
+
+.social-media-text {
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-bg-color);
+}
+
+.footer-social-list {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-brand);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--success-color);
+}
+
+.footer-social-icon {
+    fill: var(--light-mode);
 }
 
 /* -----------------------/FOOTER----------------------- */
@@ -395,7 +464,6 @@ img {
     gap: 24px;
     margin-bottom: 72px;
 }
-
 
 /* --------------BUTTONS------------------- */
 
@@ -433,17 +501,12 @@ img {
     row-gap: 48px;
 }
 
-.examples .item {
-    max-width: calc((100%-2*24px)/3);
+.examples-link {
+
+    width: calc((100%-2 * 24px) / 3);
 }
 
-/* .examples .item:nth-child(3n) {
-    margin-right: 0px;
-}
 
-.examples .item:nth-last-child(-n+3) {
-    margin-bottom: 0px;
-} */
 
 /* ------------DESIGN FOR BOTTOM SIDE OF CARD------ */
 
@@ -455,6 +518,14 @@ img {
     border-top: none;
 }
 
+.item-examples:hover,
+.item-examples:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-color: var(--light-mode);
+}
+
+
+
 .example-description {
     margin-bottom: 8px;
 
@@ -463,7 +534,6 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
-
 }
 
 .card-sign .section-text {
