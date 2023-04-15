@@ -534,9 +534,13 @@ img {
     row-gap: 48px;
 }
 
+.item-examples {
+    max-width: calc((100%-2 * 24px) / 3);
+}
+
 .examples-link {
     display: block;
-    width: calc((100%-2 * 24px) / 3);
+
 }
 
 .examples-link:hover,
@@ -553,6 +557,7 @@ img {
     padding-left: 16px;
     border: 1px solid var(--accent-color);
     border-top: none;
+    width: 360px;
 }
 
 .example-description {
