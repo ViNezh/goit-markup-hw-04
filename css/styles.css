@@ -549,6 +549,11 @@ img {
     border-color: var(--light-mode);
 }
 
+.examples-link:hover .card-sign,
+.examples-link:focus .card-sign {
+    border-color: transparent;
+}
+
 /* ------------DESIGN FOR BOTTOM SIDE OF CARD------ */
 
 .card-sign {
